@@ -1,15 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Chat</title>
 
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  
+  <header>...</header>
 
+  <aside>...</aside>
+
+  <main>
+
+    <div id="div_mensagens">
+
+    </div>
+
+    <form id="form_mensagem">
+      <div>
+        <input id="input_mensagem" placeholder="Digite sua mensagem aqui">
+        <button id="button_enviar_mensagem" type="submit">></button>
+      </div>
+    </form>
+
+  </main>
+
+  <footer>...</footer>
+
+  <script src="/socket.io/socket.io.js"></script>
+  
+  <script src="js/geral.js"></script>
   <script src="js/script.js"></script>
+  <script src="js/send_message.js"></script>
+  <script src="js/receive_message.js"></script>
 </body>
 </html>
