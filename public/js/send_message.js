@@ -6,7 +6,10 @@ form_mensagem.addEventListener("submit", (e) =>{
   e.preventDefault()
   
   const mensagem = input_mensagem.value
-  if(!mensagem) return
+  if(!mensagem){
+    console.log("retornando")
+    return
+  }
 
-  socket.emit("envio_mensagem", { mensagem })
+  socket.emit("envio_mensagem", { mensagem, current_room })
 })

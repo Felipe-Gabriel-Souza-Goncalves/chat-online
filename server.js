@@ -18,8 +18,31 @@ app.get('/', (req, res) => res.sendFile(__dirname + '/index.html'))
 
 // Evento quando o cliente se conecta ao servidor 
 io.on('connection', (socket) => {
+
+
     // Evento para cliente envia mensagem
-    socket.on('envio_mensagem', (data) => io.emit('nova_mensagem', data))
+    socket.on('envio_mensagem', (data) => {
+        if(data.current_room == undefined){
+            console.log("Nenhuma sala definida")
+            return
+        }
+
+        console.log("no envio_mensagem "+ data.mensagem)
+        console.log(data.current_room)
+        io.to(data.current_room).emit('nova_mensagem', {mensagem: data.mensagem })
+    })
+
+    socket.on('new_room', (data) => {
+        console.log("current_room: "+data.current_room)
+        socket.join(data.code)
+    })
+
+    socket.on('change_room', (data) =>{
+        console.log("entrando na sala "+ data.code)
+        socket.leave(data.current_room)
+        socket.join(data.code)
+    })
+
 
     // Evento para o cliente se desconecta do servidor
     socket.on('disconnect', () => console.log('Usuário desconectado'))

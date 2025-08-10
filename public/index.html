@@ -10,9 +10,19 @@
 <body>
   <header>...</header>
 
-  <aside>...</aside>
+  <aside>
+    <div id="meus_chats">
+      
+    </div>
+  </aside>
 
   <main>
+
+    <div id="div_trocar_chat">
+      <input type="text" id="test_create_room">
+      <button id="button_criar_chat" onclick="createRoom()">Criar</button>
+      <button id="button_trocar_chat" onclick="enterRoom(null, true)">Inserir código</button>
+    </div>
 
     <div id="div_mensagens">
 
@@ -33,7 +43,11 @@
   
   <script src="js/geral.js"></script>
   <script src="js/script.js"></script>
+
   <script src="js/send_message.js"></script>
   <script src="js/receive_message.js"></script>
+
+  <script src="js/new_room.js"></script>
+  <script src="js/enter_room.js"></script>
 </body>
 </html>
