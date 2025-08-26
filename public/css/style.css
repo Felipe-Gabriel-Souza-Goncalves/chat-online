@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body{
+    min-width: 100vw;
+    min-height: 100vh;
+    display: grid;
+    grid-template-areas: 
+        "aside header"
+        "aside main"
+        "footer footer";
+    grid-template-columns: 200px 1fr;  /* aside com largura fixa e o restante fluido */
+    grid-template-rows: auto 1fr auto; /* altura automática para header/footer */
+    box-sizing: border-box;
+}
+
+
+aside {
+  grid-area: aside;
+  background-color: rgb(255, 215, 208);
+}
+
+header {
+  grid-area: header;
+  background-color: #d0e0ff;
+}
+
+main {
+  position: relative;
+  grid-area: main;
+  anchor-name: 'principal';
+  background-color: #f1cfff;
+}
+
+#form_mensagem{
+  position-anchor: 'principal';
+  background-color: rgb(207, 255, 207);
+  bottom: 0;
+}
+
+
+footer {
+  grid-area: footer;
+  background-color: #f8ffb7;
+}

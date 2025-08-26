@@ -8,11 +8,18 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>...</header>
+  <header>
+    <h1>Bom dia</h1>
+  </header>
 
   <aside>
-    <div id="meus_chats">
-      
+    <div>
+      <button>Inserir código</button>
+      <button>Criar sala</button>
+    </div>
+    <div>
+      <h1>Meus chats</h1>
+      <div id="meus_chats"></div>
     </div>
   </aside>
 
@@ -21,7 +28,7 @@
     <div id="div_trocar_chat">
       <input type="text" id="test_create_room">
       <button id="button_criar_chat" onclick="createRoom()">Criar</button>
-      <button id="button_trocar_chat" onclick="enterRoom(null, true)">Inserir código</button>
+      <button id="button_trocar_chat" onclick="enterRoom(null, true)">Confirmar código</button>
     </div>
 
     <div id="div_mensagens">
