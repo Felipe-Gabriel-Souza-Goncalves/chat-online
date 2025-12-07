@@ -1,60 +1,74 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chat</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat</title>
 
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <header>
-    <h1>Bom dia</h1>
-  </header>
+    <link rel="stylesheet" href="css/style.css" />
 
-  <aside>
-    <div>
-      <button>Inserir código</button>
-      <button>Criar sala</button>
-    </div>
-    <div>
-      <h1>Meus chats</h1>
-      <div id="meus_chats"></div>
-    </div>
-  </aside>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <h1>Bom dia</h1>
+    </header>
 
-  <main>
-
-    <div id="div_trocar_chat">
-      <input type="text" id="test_create_room">
-      <button id="button_criar_chat" onclick="createRoom()">Criar</button>
-      <button id="button_trocar_chat" onclick="enterRoom(null, true)">Confirmar código</button>
-    </div>
-
-    <div id="div_mensagens">
-
-    </div>
-
-    <form id="form_mensagem">
+    <aside>
       <div>
-        <input id="input_mensagem" placeholder="Digite sua mensagem aqui">
-        <button id="button_enviar_mensagem" type="submit">></button>
+        <button>Inserir código</button>
+        <button>Criar sala</button>
       </div>
-    </form>
+      <div>
+        <h1>Meus chats</h1>
+        <div id="meus_chats"></div>
+      </div>
+    </aside>
 
-  </main>
+    <main>
+      <div id="div_trocar_chat">
+        <input type="text" id="test_create_room" />
+        <div class="d-flex justify-content-between">
+          <button id="button_criar_chat" onclick="createRoom()">Criar</button>
+          <button id="button_trocar_chat" onclick="enterRoom(null, true)">Confirmar código</button>
+        </div>
+      </div>
 
-  <footer>...</footer>
+      <div id="div_sala_atual">
+        <h2>Sala atual: <span id="span_sala_atual"></span></h2>
 
-  <script src="/socket.io/socket.io.js"></script>
-  
-  <script src="js/geral.js"></script>
-  <script src="js/script.js"></script>
+        <div id="div_mensagens"></div>
+        <form id="form_mensagem">
+          <div>
+            <input id="input_mensagem" placeholder="Digite sua mensagem aqui" />
+            <button id="button_enviar_mensagem" type="submit">></button>
+          </div>
+        </form>
 
-  <script src="js/send_message.js"></script>
-  <script src="js/receive_message.js"></script>
+      </div>
+    </main>
 
-  <script src="js/new_room.js"></script>
-  <script src="js/enter_room.js"></script>
-</body>
+    <footer>...</footer>
+
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script src="js/geral.js"></script>
+    <script src="js/script.js"></script>
+
+    <script src="js/send_message.js"></script>
+    <script src="js/receive_message.js"></script>
+
+    <script src="js/new_room.js"></script>
+    <script src="js/enter_room.js"></script>
+  </body>
 </html>
