@@ -2,8 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva,
-    Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 body {
@@ -33,13 +32,18 @@ main {
   position: relative;
   grid-area: main;
   anchor-name: "principal";
+  padding: 12px;
   background-color: #f1cfff;
 }
 
 #form_mensagem {
   position-anchor: "principal";
   background-color: rgb(207, 255, 207);
+  left: 0;
   bottom: 0;
+  position: absolute;
+  width: 100%;
+  text-align: center;
 }
 
 footer {
