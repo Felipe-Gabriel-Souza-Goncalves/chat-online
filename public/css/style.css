@@ -18,14 +18,18 @@ body {
   box-sizing: border-box;
 }
 
+br, hr, img{ user-select: none;}
+
 aside {
   grid-area: aside;
   background-color: rgb(255, 215, 208);
+  border-right: 1px solid lightgray;
 }
 
 header {
   grid-area: header;
   background-color: #d0e0ff;
+  border-bottom: 1px solid lightgray;
 }
 
 main {
@@ -37,6 +41,7 @@ main {
 }
 
 #form_mensagem {
+  border-top: 1px solid lightgray;
   position-anchor: "principal";
   background-color: rgb(207, 255, 207);
   left: 0;
@@ -49,10 +54,15 @@ main {
 footer {
   grid-area: footer;
   background-color: #f8ffb7;
+  border-top: 1px solid lightgray;
 }
 
 /* TESTE */
 #div_trocar_chat {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   background: white;
   padding: 16px;
   border-radius: 12px;
@@ -68,4 +78,14 @@ footer {
   border-bottom: 1px solid gray;
   padding: 8px 12px;
   background: #fdfdfd;
+}
+
+#input_mensagem {
+  height: 40px;
+  box-sizing: border-box;
+}
+
+#button_enviar_mensagem {
+  width: 40px;
+  height: 40px;
 }

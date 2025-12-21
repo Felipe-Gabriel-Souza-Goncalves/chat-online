@@ -19,7 +19,6 @@ app.get('/', (req, res) => res.sendFile(__dirname + '/index.html'))
 // Evento quando o cliente se conecta ao servidor 
 io.on('connection', (socket) => {
 
-
     // Evento para cliente envia mensagem
     socket.on('envio_mensagem', (data) => {
         if(data.current_room == undefined){
@@ -27,8 +26,8 @@ io.on('connection', (socket) => {
             return
         }
 
-        console.log("no envio_mensagem "+ data.mensagem)
-        console.log(data.current_room)
+        // console.log("no envio_mensagem "+ data.mensagem)
+        // console.log(data.current_room)
         io.to(data.current_room).emit('nova_mensagem', {mensagem: data.mensagem })
     })
 

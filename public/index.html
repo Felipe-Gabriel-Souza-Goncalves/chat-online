@@ -21,10 +21,10 @@
   </head>
   <body>
     <header>
-      <h1>Bom dia</h1>
+      <h1 class="text-center">Bom dia</h1>
     </header>
 
-    <aside>
+    <aside class="text-center py-3 px-1">
       <div>
         <button>Inserir código</button>
         <button>Criar sala</button>
@@ -37,10 +37,10 @@
 
     <main>
       <div id="div_trocar_chat">
-        <input type="text" id="test_create_room" />
+        <input type="text" id="test_create_room" placeholder="Insira o código" class="p-1 border-primary rounded " />
         <div class="d-flex justify-content-between">
-          <button id="button_criar_chat" onclick="createRoom()">Criar</button>
-          <button id="button_trocar_chat" onclick="enterRoom(null, true)">Confirmar código</button>
+          <button id="button_criar_chat" onclick="createRoom()" class="py-2 px-3 border-0">Criar</button>
+          <button id="button_trocar_chat" onclick="enterRoom(null, true)" class="py-2 px-3 border-0">Confirmar código</button>
         </div>
       </div>
 
@@ -48,17 +48,23 @@
         <h2>Sala atual: <span id="span_sala_atual"></span></h2>
 
         <div id="div_mensagens"></div>
-        <form id="form_mensagem">
+        <form id="form_mensagem" class="py-3">
           <div>
             <input id="input_mensagem" placeholder="Digite sua mensagem aqui" />
-            <button id="button_enviar_mensagem" type="submit">></button>
+            <button id="button_enviar_mensagem" type="submit" class="rounded-circle">></button>
           </div>
         </form>
 
       </div>
     </main>
 
-    <footer>...</footer>
+    <footer class="text-center py-4">
+      Repositório do projeto:
+      <a target="_blank" href="https://github.com/Felipe-Gabriel-Souza-Goncalves/chat-online"
+        ><br />
+        https://github.com/Felipe-Gabriel-Souza-Goncalves/chat-online</a
+      >
+    </footer>
 
     <script src="/socket.io/socket.io.js"></script>
 

@@ -7,7 +7,6 @@ form_mensagem.addEventListener("submit", (e) =>{
   
   const mensagem = input_mensagem.value
   if(!mensagem){
-    console.log("retornando")
     return
   }
 
